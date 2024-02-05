@@ -1,0 +1,355 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.body_dark {
+  background-color: #171823;
+}
+
+.body_light {
+  background-color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 40px 6.3% 132px;
+  background: url(./Assets/Mobile/Light_Path.jpg) no-repeat;
+  background-size: cover;
+}
+
+.header_dark {
+  background: url(./Assets/Mobile/Dark_Path.jpg) no-repeat;
+  background-size: cover;
+}
+
+.todo {
+  font-size: 25px;
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.dark_mode_cont {
+  cursor: pointer;
+}
+
+.moon_icon,
+.sun_icon {
+  width: 20px;
+}
+
+.sun_icon {
+  display: none;
+}
+
+main {
+  position: relative;
+  margin-top: -92px;
+  padding: 0 6.3%;
+  z-index: 1;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: transparent;
+}
+
+form,
+.checkbox_cont {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  gap: 12px;
+  width: 100%;
+  height: 48px;
+  padding-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  background: #fff;
+}
+
+.form_dark {
+  background-color: #25273d;
+}
+
+.checkbox_input {
+  display: none;
+}
+
+/* Style the custom checkbox label */
+label {
+  width: 20px;
+  height: 20px;
+  background: transparent; /* Background color of the checkbox */
+  border: 1px solid #e3e4f1; /* Border color of the checkbox */
+  border-radius: 50%; /* Make it round */
+  cursor: pointer;
+}
+
+.label_dark {
+  border: 1px solid #393a4b;
+}
+
+/* Style the label when the checkbox is checked */
+.checkbox_input:checked + label {
+  border: none;
+  background: url(./Assets/Icons/Checked.svg) no-repeat;
+}
+
+.create_input {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: #393a4b;
+  outline: none;
+  border: none;
+}
+
+.create_input_dark {
+  color: #c8cbe7;
+  background-color: #25273d;
+}
+
+.validation_span {
+  display: none;
+  font-size: 14px;
+  font-family: "Josefin Sans";
+  color: red;
+  padding-left: 20px;
+}
+
+.tasks_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 368px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+
+.tasks_container_dark {
+  background-color: #25273d;
+  color: #5b5e7e;
+  box-shadow: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 5px;
+  border-bottom: 1px solid #e3e4f1;
+  /* background-color: #fff; */
+}
+
+.task_dark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 5px;
+  border-bottom: 1px solid #393a4b;
+  background-color: #25273d;
+}
+
+.text_cont {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text_cont > span {
+  font-size: 18px;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  letter-spacing: -0.167px;
+  color: #494c6b;
+}
+
+/* .span_dark {
+  color: #c8cbe7;
+} */
+
+.delete_icon {
+  cursor: pointer;
+}
+
+.statistic_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  background-color: white;
+}
+
+.statistic_container_dark {
+  box-shadow: none;
+  background-color: #25273d;
+}
+
+.statistic_container > span {
+  font-size: 12px;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  letter-spacing: -0.167px;
+  color: #9495a5;
+}
+
+.filter_desktop {
+  display: none;
+}
+
+.filter_cont_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.filter_cont_dark {
+  background-color: #25273d;
+}
+
+.filter_cont_mobile > span,
+.filter_desktop > span {
+  font-size: 16px;
+  font-family: "Josefin Sans";
+  font-weight: 700;
+  letter-spacing: -0.167px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: #9495a5;
+}
+
+.filter_cont_mobile > span:hover,
+.filter_desktop > span:hover {
+  color: blue;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+footer > p {
+  font-size: 14px;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  text-align: center;
+  line-height: 14px;
+  letter-spacing: -0.1944444477558136px;
+  color: #9495a5;
+}
+
+@media (width >= 1440px) {
+  header {
+    padding: 60px 32.4% 132px;
+    background: url(./Assets/Desktop/Light_Path.png) no-repeat;
+    background-size: cover;
+  }
+
+  .header_dark {
+    background: url(./Assets/Desktop/Dark_Path.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .todo {
+    font-size: 40px;
+    letter-spacing: 15px;
+    line-height: 48px;
+  }
+
+  .moon_icon,
+  .sun_icon {
+    width: 30px;
+  }
+
+  main {
+    padding: 0 32.4%;
+  }
+
+  .main_container {
+    gap: 0;
+  }
+
+  form {
+    gap: 20px;
+    height: 64px;
+  }
+
+  label {
+    width: 22px;
+    height: 22px;
+  }
+
+  .validation_span {
+    font-size: 16px;
+  }
+
+  .tasks_container {
+    overflow-y: scroll;
+    max-height: 50px;
+    margin-top: 16px;
+  }
+
+  .task {
+    padding: 0 20px;
+    height: 64px;
+  }
+
+  .statistic_container {
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  .statistic_container > span {
+    font-size: 12px;
+  }
+
+  .filter_desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 145px;
+  }
+
+  .filter_desktop > span {
+    font-size: 12px;
+  }
+
+  .filter_cont_mobile {
+    display: none;
+  }
+
+  footer > p {
+    font-size: 16px;
+  }
+}
