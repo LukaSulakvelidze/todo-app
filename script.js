@@ -53,14 +53,14 @@ add_checkbox.addEventListener("click", () => {
     form.style.border = "1px solid red";
     alert_span.style.display = "block";
     add_checkbox.style.border = "1px solid #e3e4f1"
-    add_checkbox.style.background = "white"
+    add_checkbox.style.background = "transparent"
   } else {
     add_checkbox.style.border = "none"
     add_checkbox.style.background = "url(./Assets/Icons/Checked.svg) no-repeat"
     add_task()
   } 
 setTimeout(() => {
-  add_checkbox.style.background ="white"
+  add_checkbox.style.background = "transparent"
   add_checkbox.style.border = "1px solid #e3e4f1"
 }, 1000);
 });
