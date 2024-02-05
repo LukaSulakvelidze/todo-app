@@ -2,6 +2,7 @@ const main_container = document.querySelector(".main_container");
 const form = document.getElementById("form");
 const todo_input = document.querySelector(".create_input");
 const add_checkbox = document.getElementById("add_checkbox");
+
 let todo_tasks = [];
 
 let alert_span = document.querySelector(".validation_span");

@@ -316,7 +316,6 @@ footer > p {
 
   .tasks_container {
     overflow-y: scroll;
-    max-height: 50px;
     margin-top: 16px;
   }
 
